@@ -3,6 +3,10 @@
     {
       "name": "dev",
       "description": "Is TEST OMH"
+    },
+    {
+      "name": "prod",
+      "description": "Is TEST OMH"
     }
   ],
 
@@ -11,6 +15,13 @@
       "name": "myservice",
       "startClass": "foo.bla.generated.MyServer",
       "rmiPort": 9228,
+      "profiles": ["dev"]
+    },
+    {
+      "name": "myservice-failover",
+      "startClass": "foo.bla.generated.MyServer",
+      "rmiPort": 9227,
+      "jvmOptions": "-DdimeRegistrationNameProvider=org.distributeme.core.failing.Failover",
       "profiles": ["dev"]
     }
   ]
