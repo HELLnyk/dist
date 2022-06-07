@@ -12,7 +12,7 @@ public class Test {
 
     public static void main(String[] args) {
         MyService service = ServiceLocator.getRemote(MyService.class);
-        String message = "Hello world at ONG"+new Date(System.currentTimeMillis());
+        String message = "Hello world and FUCK YEAH";
         System.out.println("Server should print out following message now: "+message);
         service.printMessage(message);
     }
